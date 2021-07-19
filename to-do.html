@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DZ40</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="JS/jquery-3.6.0.min.js"></script>
+    <script src="JS/jquery_cookie.js"></script>
+    <script src="JS/jquery-ui.min.js"></script>
+    <script src="JS/DZ40.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div id="page">
+            <img src="images/hand1.png" alt="hand1" class="hand" id="hand1">
+            <img src="images/hand2.png" alt="hand2" class="hand" id="hand2">
+            <h1 id="header">Список дел</h1>
+            <h2>В списке: <span id="counter"></span></h2>
+            <ul id="ul">
+                <li id="one">
+                    <p>
+                        <span class="item">Поспать</span>
+                        <span class="date">02.02.2021 12:01</span>
+                    </p>
+                    <img src="images/edit.png" class="edit" alt="">
+                    <img src="images/del.png" class="del" alt="">
+                </li>
+                <li id="two">
+                    <p>
+                        <span class="item">Помыть кота</span>
+                        <span class="date">12.03.2021 21:41</span>
+                    </p>
+                    <img src="images/edit.png" class="edit" alt="">
+                    <img src="images/del.png" class="del" alt="">
+                </li>
+                <li id="three">
+                    <p>
+                        <span class="item">Приготовить еду</span>
+                        <span class="date">17.03.2021 15:25</span>
+                    </p>
+                    <img src="images/edit.png" class="edit" alt="">
+                    <img src="images/del.png" class="del" alt="">
+                </li>
+                <li id="four">
+                    <p>
+                        <span class="item">Сделать уборку</span>
+                        <span class="date">18.04.2021 7:11</span>
+                    </p>
+                    <img src="images/edit.png" class="edit" alt="">
+                    <img src="images/del.png" class="del" alt="">
+                </li>
+            </ul>
+            <div id="newItemButton">
+                <a href="#" id="showForm">Новый элемент</a>
+            </div>
+            <form action="" id="newItemForm">
+                <label for="itemDescription">
+                    <input type="text" id="itemDescription" placeholder="Укажите дело" autocomplete="off">
+                </label>
+
+                <input type="button" id="add" value="Добавить">
+            </form>
+        </div>
+
+        <div class="rightField">
+            <div id="basket"></div>
+            <input type="button" class="clear" value="Очистить">
+        </div>
+
+        <div id="basketContent">
+            <p><span class="basketClose">Закрыть</span></p>
+            <h2>Удаленные дела:</h2>
+            <ul id="basketList"></ul>
+            <input type="button" class="clear" value="Очистить">
+        </div>
+    </div>
+</body>
+</html>
